@@ -1,0 +1,769 @@
+####measurement = cassandra_table_livesstablecount
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancement,name=LiveSSTableCount"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livediskspaceused
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancement,name=LiveDiskSpaceUsed"
+  method: "GET"
+  request.enabled: true
+
+####measurement = SSTable_Compression_Ratio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancement,name=CompressionRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_readlatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancement,name=ReadLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_writelatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancement,name=WriteLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_BloomFilterFalseRatio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancement,name=BloomFilterFalseRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_TombstoneScannedHistogram
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancement,name=TombstoneScannedHistogram"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livesstablecount
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enterprise,name=LiveSSTableCount"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livediskspaceused
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enterprise,name=LiveDiskSpaceUsed"
+  method: "GET"
+  request.enabled: true
+
+####measurement = SSTable_Compression_Ratio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enterprise,name=CompressionRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_readlatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enterprise,name=ReadLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_writelatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enterprise,name=WriteLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_BloomFilterFalseRatio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enterprise,name=BloomFilterFalseRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_TombstoneScannedHistogram
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enterprise,name=TombstoneScannedHistogram"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livesstablecount
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=entityattributedata,name=LiveSSTableCount"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livediskspaceused
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=entityattributedata,name=LiveDiskSpaceUsed"
+  method: "GET"
+  request.enabled: true
+
+####measurement = SSTable_Compression_Ratio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=entityattributedata,name=CompressionRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_readlatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=entityattributedata,name=ReadLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_writelatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=entityattributedata,name=WriteLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_BloomFilterFalseRatio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=entityattributedata,name=BloomFilterFalseRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_TombstoneScannedHistogram
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=entityattributedata,name=TombstoneScannedHistogram"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livesstablecount
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=projectdata,name=LiveSSTableCount"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livediskspaceused
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=projectdata,name=LiveDiskSpaceUsed"
+  method: "GET"
+  request.enabled: true
+
+####measurement = SSTable_Compression_Ratio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=projectdata,name=CompressionRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_readlatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=projectdata,name=ReadLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_writelatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=projectdata,name=WriteLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_BloomFilterFalseRatio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=projectdata,name=BloomFilterFalseRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_TombstoneScannedHistogram
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=projectdata,name=TombstoneScannedHistogram"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livesstablecount
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=roledata,name=LiveSSTableCount"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livediskspaceused
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=roledata,name=LiveDiskSpaceUsed"
+  method: "GET"
+  request.enabled: true
+
+####measurement = SSTable_Compression_Ratio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=roledata,name=CompressionRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_readlatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=roledata,name=ReadLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_writelatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=roledata,name=WriteLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_BloomFilterFalseRatio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=roledata,name=BloomFilterFalseRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_TombstoneScannedHistogram
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=roledata,name=TombstoneScannedHistogram"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livesstablecount
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=usersessioninfo,name=LiveSSTableCount"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livediskspaceused
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=usersessioninfo,name=LiveDiskSpaceUsed"
+  method: "GET"
+  request.enabled: true
+
+####measurement = SSTable_Compression_Ratio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=usersessioninfo,name=CompressionRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_readlatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=usersessioninfo,name=ReadLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_writelatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=usersessioninfo,name=WriteLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_BloomFilterFalseRatio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=usersessioninfo,name=BloomFilterFalseRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_TombstoneScannedHistogram
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=usersessioninfo,name=TombstoneScannedHistogram"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livesstablecount
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=menumaster,name=LiveSSTableCount"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livediskspaceused
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=menumaster,name=LiveDiskSpaceUsed"
+  method: "GET"
+  request.enabled: true
+
+####measurement = SSTable_Compression_Ratio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=menumaster,name=CompressionRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_readlatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=menumaster,name=ReadLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_writelatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=menumaster,name=WriteLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_BloomFilterFalseRatio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=menumaster,name=BloomFilterFalseRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_TombstoneScannedHistogram
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=menumaster,name=TombstoneScannedHistogram"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livesstablecount
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancementtrenddata,name=LiveSSTableCount"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livediskspaceused
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancementtrenddata,name=LiveDiskSpaceUsed"
+  method: "GET"
+  request.enabled: true
+
+####measurement = SSTable_Compression_Ratio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancementtrenddata,name=CompressionRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_readlatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancementtrenddata,name=ReadLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_writelatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancementtrenddata,name=WriteLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_BloomFilterFalseRatio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancementtrenddata,name=BloomFilterFalseRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_TombstoneScannedHistogram
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=enhancementtrenddata,name=TombstoneScannedHistogram"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livesstablecount
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=project,name=LiveSSTableCount"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livediskspaceused
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=project,name=LiveDiskSpaceUsed"
+  method: "GET"
+  request.enabled: true
+
+####measurement = SSTable_Compression_Ratio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=project,name=CompressionRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_readlatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=project,name=ReadLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_writelatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=project,name=WriteLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_BloomFilterFalseRatio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=project,name=BloomFilterFalseRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_TombstoneScannedHistogram
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=project,name=TombstoneScannedHistogram"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livesstablecount
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=timelogs,name=LiveSSTableCount"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_livediskspaceused
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=timelogs,name=LiveDiskSpaceUsed"
+  method: "GET"
+  request.enabled: true
+
+####measurement = SSTable_Compression_Ratio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=timelogs,name=CompressionRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_readlatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=timelogs,name=ReadLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_writelatency
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=timelogs,name=WriteLatency"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_BloomFilterFalseRatio
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=timelogs,name=BloomFilterFalseRatio"
+  method: "GET"
+  request.enabled: true
+
+####measurement = cassandra_table_TombstoneScannedHistogram
+
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["192.168.100.1:8778"]
+  namespace: "cassandra"
+  path: "/jolokia/read/org.apache.cassandra.metrics:type=Table,keyspace=rishi,scope=timelogs,name=TombstoneScannedHistogram"
+  method: "GET"
+  request.enabled: true

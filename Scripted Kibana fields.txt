@@ -1,0 +1,161 @@
+Scipted kibana fields:
+
+Metricname:
+
+def path = doc['http.cassandra.request.mbean'].value;
+if (path != null) {
+int firstIndex= path.indexOf("name=")+5;
+int lastindex = path.indexOf("scope")-1;
+return path.substring(firstIndex,lastindex);
+}
+return "";
+
+Metricvalue:
+
+def valueList = new ArrayList();
+valueList.add("CompressionRatio");
+valueList.add("BloomFilterFalseRatio");
+valueList.add("LiveSSTableCount");
+
+def countList = new ArrayList();
+countList.add("LiveDiskSpaceUsed");
+countList.add("ReadLatency");
+countList.add("WriteLatency");
+countList.add("TombstoneScannedHistogram");
+
+def metricname = null;
+def path = doc['http.cassandra.request.mbean'].value;
+if (path != null) {
+int firstIndex= path.indexOf("name=")+5;
+int lastindex = path.indexOf("scope")-1;
+metricname =  path.substring(firstIndex,lastindex);
+}
+
+if (metricname != null && valueList.contains(metricname)) {
+return doc['http.cassandra.value.Value'];
+}
+else if (metricname != null && countList.contains(metricname)) {
+return doc['http.cassandra.value.Count'];
+}
+
+Tablename:
+
+def path = doc['http.cassandra.request.mbean'].value;
+if (path != null) {
+int firstIndex= path.indexOf("scope=")+6;
+int lastindex = path.indexOf("type")-1;
+return path.substring(firstIndex,lastindex);
+}
+return "";
+
+livesstablecount:
+
+def currentName = null;
+def metricName = "LiveSSTableCount";
+
+def path = doc['http.cassandra.request.mbean'].value;
+if (path != null) {
+int firstIndex= path.indexOf("name=")+5;
+int lastindex = path.indexOf("scope")-1;
+currentName =  path.substring(firstIndex,lastindex);
+}
+
+if (currentName != null && metricName.equals(currentName)) {
+return doc['http.cassandra.value.Value'];
+}
+
+bloomfilterfalseratio:
+
+def currentName = null;
+def metricName = "BloomFilterFalseRatio";
+
+def path = doc['http.cassandra.request.mbean'].value;
+if (path != null) {
+int firstIndex= path.indexOf("name=")+5;
+int lastindex = path.indexOf("scope")-1;
+currentName =  path.substring(firstIndex,lastindex);
+}
+
+if (currentName != null && metricName.equals(currentName)) {
+return doc['http.cassandra.value.Value'];
+}
+
+compressionratio:
+
+def currentName = null;
+def metricName = "CompressionRatio";
+
+def path = doc['http.cassandra.request.mbean'].value;
+if (path != null) {
+int firstIndex= path.indexOf("name=")+5;
+int lastindex = path.indexOf("scope")-1;
+currentName =  path.substring(firstIndex,lastindex);
+}
+
+if (currentName != null && metricName.equals(currentName)) {
+return doc['http.cassandra.value.Value'];
+}
+
+livediskspaceused:
+
+def currentName = null;
+def metricName = "LiveDiskSpaceUsed";
+
+def path = doc['http.cassandra.request.mbean'].value;
+if (path != null) {
+int firstIndex= path.indexOf("name=")+5;
+int lastindex = path.indexOf("scope")-1;
+currentName =  path.substring(firstIndex,lastindex);
+}
+
+if (currentName != null && metricName.equals(currentName)) {
+return doc['http.cassandra.value.Count'];
+}
+
+readlatency:
+
+def currentName = null;
+def metricName = "ReadLatency";
+
+def path = doc['http.cassandra.request.mbean'].value;
+if (path != null) {
+int firstIndex= path.indexOf("name=")+5;
+int lastindex = path.indexOf("scope")-1;
+currentName =  path.substring(firstIndex,lastindex);
+}
+
+if (currentName != null && metricName.equals(currentName)) {
+return doc['http.cassandra.value.Count'];
+}
+
+writelatency:
+
+def currentName = null;
+def metricName = "WriteLatency";
+
+def path = doc['http.cassandra.request.mbean'].value;
+if (path != null) {
+int firstIndex= path.indexOf("name=")+5;
+int lastindex = path.indexOf("scope")-1;
+currentName =  path.substring(firstIndex,lastindex);
+}
+
+if (currentName != null && metricName.equals(currentName)) {
+return doc['http.cassandra.value.Count'];
+}
+
+tombstonescannedhistogram:
+
+def currentName = null;
+def metricName = "TombstoneScannedHistogram";
+
+def path = doc['http.cassandra.request.mbean'].value;
+if (path != null) {
+int firstIndex= path.indexOf("name=")+5;
+int lastindex = path.indexOf("scope")-1;
+currentName =  path.substring(firstIndex,lastindex);
+}
+
+if (currentName != null && metricName.equals(currentName)) {
+return doc['http.cassandra.value.Count'];
+}
